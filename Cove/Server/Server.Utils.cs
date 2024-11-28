@@ -312,7 +312,7 @@ namespace Cove.Server
             Console.Title = $"Cove Dedicated Server, {AllPlayers.Count} players!";
 
             SteamMatchmaking.SetLobbyData(SteamLobby, "lobby_name", serverName);
-            SteamMatchmaking.SetLobbyData(SteamLobby, "name", serverName);
+            SteamMatchmaking.SetLobbyData(SteamLobby, "name", $"{SteamFriends.GetPersonaName()}");
             SteamMatchmaking.SetLobbyData(SteamLobby, "player_count", $"{SteamMatchmaking.GetNumLobbyMembers(SteamLobby)}");
         }
 
